@@ -183,7 +183,7 @@ export function BehindTheJourneyGallery() {
         currentIndex={lightboxIdx}
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
-        onNavigate={(newIdx) => setActivePhotoIdx(newIdx)}
+        onNavigate={(newIdx) => setLightboxIdx(newIdx)}
       />
     </section>
   );

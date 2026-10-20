@@ -14,7 +14,7 @@ export function Cursor() {
   const mouseY = useMotionValue(-100);
 
   // Velocity tracking for 1minus1 style cursor stretch
-  const lastMousePos = useRef({ x: 0, y: 0, time: Date.now() });
+  const lastMousePos = useRef({ x: 0, y: 0, time: 0 });
   const [cursorAngle, setCursorAngle] = useState(0);
   const [cursorScaleX, setCursorScaleX] = useState(1);
   const [cursorScaleY, setCursorScaleY] = useState(1);
@@ -31,7 +31,7 @@ export function Cursor() {
 
     const handleMouseMove = (e: MouseEvent) => {
       const now = Date.now();
-      const dt = Math.max(1, now - lastMousePos.current.time);
+      const dt = lastMousePos.current.time > 0 ? Math.max(1, now - lastMousePos.current.time) : 16;
       const dx = e.clientX - lastMousePos.current.x;
       const dy = e.clientY - lastMousePos.current.y;
       const speed = Math.sqrt(dx * dx + dy * dy) / dt;
