@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g4)"/>
+  <rect x="30" y="30" width="740" height="940" fill="none" stroke="#C9A24B" stroke-width="1" stroke-opacity="0.2"/>
+  
+  <!-- Overlapping circles -->
+  <circle cx="360" cy="420" r="90" fill="none" stroke="#C9A24B" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="440" cy="420" r="90" fill="none" stroke="#E8C877" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <text x="400" y="620" font-family="monospace" font-size="12" fill="#C9A24B" letter-spacing="3" text-anchor="middle" font-weight="600">(GALLERY 04)</text>
+  <text x="400" y="660" font-family="sans-serif" font-size="22" fill="#F2EFE9" font-weight="600" text-anchor="middle">Multi-Industry Collaborations</text>
+  <text x="400" y="695" font-family="sans-serif" font-size="13" fill="#888888" text-anchor="middle">Travel, healthcare, education, jewellery, hospitality, retail</text>
+  <text x="400" y="760" font-family="monospace" font-size="10" fill="#555555" letter-spacing="1.5" text-anchor="middle">REPLACE IN: /public/placeholders/gallery-client-collab.jpg</text>
+</svg>

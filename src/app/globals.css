@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #0A0A0A;
+    --foreground: #F2EFE9;
+    --card: #111111;
+    --border: rgba(242, 239, 233, 0.08);
+    --gold-primary: #C9A24B;
+    --gold-light: #E8C877;
+    --gold-glow: rgba(201, 162, 75, 0.15);
+
+    /* Typography Tokens */
+    --font-display: "Boska", Georgia, serif;
+    --font-body: "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: var(--font-jetbrains-mono), monospace;
+  }
+
+  .light {
+    --background: #F8F6F0;
+    --foreground: #121212;
+    --card: #FFFFFF;
+    --border: rgba(18, 18, 18, 0.08);
+    --gold-primary: #B8892C;
+    --gold-light: #D4A33E;
+    --gold-glow: rgba(184, 137, 44, 0.12);
+  }
+
+  html {
+    background-color: var(--background);
+    color: var(--foreground);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: #C9A24B;
+    color: #0A0A0A;
+  }
+}
+
+/* Typography Classes */
+.font-display,
+.font-serif {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.font-body,
+.font-sans {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+/* Fluid Headline Sizing */
+h1, h2, h3 {
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+}
+
+/* Luxury Gold Text Gradient */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #C9A24B 0%, #F5E3B8 50%, #C9A24B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Clean Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A24B;
+}
+
+/* Utility to hide scrollbar for horizontal drag ribbon */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
